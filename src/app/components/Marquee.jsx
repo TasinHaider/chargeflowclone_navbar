@@ -12,7 +12,7 @@ const MarqueePage = () => {
                 speed={20}
                 gradient={false}
                 direction="left"
-                pauseOnHover={true} // Only this prop is added to your original code
+                pauseOnHover={true}
             >
                 <div className='flex items-center gap-4'>
                     <div className='flex items-center gap-4'>
@@ -40,7 +40,7 @@ const MarqueePage = () => {
                             />
                         </svg>
                     </div>
-                    <div className='flex '><p className='font-inter font-normal text-[12px] '><span className='text-[#C3F967]'>ANNOUNCING OUT $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p> <FiArrowRight />
+                    <div className='flex items-center gap-4'><p className='font-inter font-normal text-[12px] '><span className='text-[#C3F967]'>ANNOUNCING OUT $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p> <FiArrowRight />
                     </div>
                     <div className='flex items-center gap-4'>
                         <Image
