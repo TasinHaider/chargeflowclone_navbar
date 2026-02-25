@@ -42,7 +42,7 @@ const Navbar = () => {
             {/* 1. Marquee Container */}
             <div
                 style={{ maxWidth: isHovered ? '1200px' : '100%' }}
-                className={`${smoothTransition} w-full overflow-hidden bg-black ${isHovered ? 'rounded-t-2xl border-x border-t border-white' : 'border-b border-white/5'
+                className={`${smoothTransition} w-full overflow-hidden bg-black ${isHovered ? 'rounded-t-2xl border-x border-t border-white/5' : 'border-b border-white/0'
                     }`}
             >
                 <div className="min-h-[40px] px-2">
@@ -53,13 +53,13 @@ const Navbar = () => {
             {/* 2. Main Navbar Section */}
             <div
                 style={{ maxWidth: isHovered ? '1200px' : '100%' }}
-                className={`${smoothTransition} w-full bg-black relative ${isHovered ? 'rounded-b-2xl border-x border-b border-white' : ''
+                className={`${smoothTransition} w-full bg-black relative ${isHovered ? 'rounded-b-2xl border-x border-b border-white/5 -mt-[2px]' : 'border-white/0 -mt-[2px]'
                     }`}
             >
                 <div className='container mx-auto px-6 flex justify-between items-center py-2'>
                     {/* Logo Group */}
                     <div className='flex items-center gap-1 overflow-hidden shrink-0'>
-                        <Image src={icon} alt="Logomark" className="brightness-0 invert shrink-0 h-6 w-6" />
+                        <Image src={icon} alt="Logomark" className="brightness-0 invert shrink-0" />
                         <motion.div
                             initial={false}
                             animate={{
@@ -70,7 +70,7 @@ const Navbar = () => {
                             transition={transitionConfig}
                             className="overflow-hidden whitespace-nowrap flex items-center"
                         >
-                            <Image src={chargeflow} alt="Chargeflow" className="brightness-0 invert h-4 w-auto" />
+                            <Image src={chargeflow} alt="Chargeflow" className="brightness-0 invert" />
                         </motion.div>
                     </div>
 
@@ -107,26 +107,19 @@ const Navbar = () => {
                 </div>
 
                 {/* Dropdown Content */}
-                <AnimatePresence mode="wait">
-                    {isHovered && activeTab && (
-                        <motion.div
-                            key={activeTab}
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={transitionConfig}
-                            className="w-full bg-black overflow-hidden rounded-b-2xl"
-                        >
-                            <div className='p-2 grid grid-cols-5 justify-between text-white'>
-                                {activeTab === 'product' && <PreventCard />}
-                                {activeTab === 'customers' && <CustomersDropdown />}
-                                {/* {activeTab === 'pricing' && }
-                                {activeTab === 'integrations' && }
-                                {activeTab === 'resources' && } */}
-                            </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                <motion.div
+                    key={activeTab}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={transitionConfig}
+                    className="w-full bg-black/40 backdrop-blur-xl overflow-hidden rounded-b-2xl"
+                >
+                    <div>
+                        {activeTab === 'product' && <PreventCard />}
+                        {activeTab === 'customers' && <CustomersDropdown />}
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

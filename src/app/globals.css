@@ -4,7 +4,11 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: transparent;
+  background-color: #000000;
+  color: #ffffff;
+  /* Smooth rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @theme {
