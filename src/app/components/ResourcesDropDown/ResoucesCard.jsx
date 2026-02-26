@@ -24,14 +24,14 @@ const ResoucesCard = () => {
                     <div className="absolute w-80 h-80 left-4 top-10 pointer-events-none z-20">
                         <Image
                             src={blogprimary}
-                            alt=""
+                            alt="blogprimary"
                             fill
-                            className="object-contain object-bottom grayscale opacity-30 transition-none"
+                            className="object-contain object-bottom grayscale opacity-50 transition-none"
                             priority
                         />
                         <Image
                             src={blogsecondary}
-                            alt=""
+                            alt="blogsecondary"
                             fill
                             className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"
                             priority
@@ -53,7 +53,7 @@ const ResoucesCard = () => {
                             src={reportsprimary}
                             alt=""
                             fill
-                            className="object-contain object-bottom grayscale opacity-30 transition-none"
+                            className="object-contain object-bottom grayscale opacity-50 transition-none"
                             priority
                         />
                         <Image
@@ -81,7 +81,7 @@ const ResoucesCard = () => {
                             src={podcastprimary}
                             alt=""
                             fill
-                            className="object-contain object-bottom grayscale opacity-30 transition-none"
+                            className="object-contain object-bottom grayscale opacity-50 transition-none"
                             priority
                         />
                         <Image
@@ -108,7 +108,7 @@ const ResoucesCard = () => {
                             src={webinarsprimary}
                             alt=""
                             fill
-                            className="object-contain object-bottom grayscale opacity-30 transition-none"
+                            className="object-contain object-bottom grayscale opacity-50 transition-none"
                             priority
                         />
                         <Image

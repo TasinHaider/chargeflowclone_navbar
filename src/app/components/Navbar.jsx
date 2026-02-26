@@ -12,6 +12,7 @@ import CustomersDropdown from './CustomersDropdown/CustomersCard';
 import PreventCard from './ProductDropDown/PreventCard';
 import IntegrationCard from './IntegrationsDropDown/IntegrationCard';
 import ResoucesCard from './ResourcesDropDown/ResoucesCard';
+import CompanyCard from './CompanyDropDown/CompanyCard';
 
 const Navbar = () => {
     const [mounted, setMounted] = useState(false);
@@ -125,6 +126,7 @@ const Navbar = () => {
                         {activeTab === 'customers' && <CustomersDropdown />}
                         {activeTab === 'integrations' && <IntegrationCard />}
                         {activeTab === 'resources' && <ResoucesCard />}
+                        {activeTab === 'company' && <CompanyCard />}
                     </div>
                 </motion.div>
             </div>
