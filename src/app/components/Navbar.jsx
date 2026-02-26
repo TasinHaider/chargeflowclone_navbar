@@ -10,6 +10,8 @@ import chargeflow from '../../../public/chargeflow.svg';
 import { AnimatePresence, motion } from "motion/react";
 import CustomersDropdown from './CustomersDropdown/CustomersCard';
 import PreventCard from './ProductDropDown/PreventCard';
+import IntegrationCard from './IntegrationsDropDown/IntegrationCard';
+import ResoucesCard from './ResourcesDropDown/ResoucesCard';
 
 const Navbar = () => {
     const [mounted, setMounted] = useState(false);
@@ -23,7 +25,6 @@ const Navbar = () => {
     const transitionConfig = { duration: 0.7, ease: [0.23, 1, 0.32, 1] };
     const smoothTransition = "transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]";
 
-    // Fixed: Removed TypeScript type ': string' for JSX compatibility
     const handleMouseEnter = (tab) => {
         setIsHovered(true);
         setActiveTab(tab);
@@ -56,7 +57,8 @@ const Navbar = () => {
                 className={`${smoothTransition} w-full bg-black relative ${isHovered ? 'rounded-b-2xl border-x border-b border-white/5 -mt-[2px]' : 'border-white/0 -mt-[2px]'
                     }`}
             >
-                <div className='container mx-auto px-6 flex justify-between items-center py-2'>
+                {/* FIX: replaced `container mx-auto` with `max-w-[1200px] mx-auto` */}
+                <div className='max-w-[1200px] mx-auto px-6 flex justify-between items-center py-2'>
                     {/* Logo Group */}
                     <div className='flex items-center gap-1 overflow-hidden shrink-0'>
                         <Image src={icon} alt="Logomark" className="brightness-0 invert shrink-0" />
@@ -74,7 +76,7 @@ const Navbar = () => {
                         </motion.div>
                     </div>
 
-                    {/* Navigation - Explicit Components (No .map()) */}
+                    {/* Navigation */}
                     <nav className='px-5 py-2 bg-[#1A1A1A] backdrop-blur-md border border-white/10 rounded-full hidden md:block hover:border-white/20 transition-colors'>
                         <ul className='flex items-center gap-6 font-inter font-semibold text-[12px] text-white/80'>
                             <li onMouseEnter={() => handleMouseEnter('product')} className="hover:text-white transition-colors cursor-pointer uppercase tracking-tight">
@@ -91,6 +93,9 @@ const Navbar = () => {
                             </li>
                             <li onMouseEnter={() => handleMouseEnter('resources')} className="hover:text-white transition-colors cursor-pointer uppercase tracking-tight">
                                 <Link href='/'>Resources</Link>
+                            </li>
+                            <li onMouseEnter={() => handleMouseEnter('company')} className="hover:text-white transition-colors cursor-pointer uppercase tracking-tight">
+                                <Link href='/'>Company</Link>
                             </li>
                         </ul>
                     </nav>
@@ -118,6 +123,8 @@ const Navbar = () => {
                     <div>
                         {activeTab === 'product' && <PreventCard />}
                         {activeTab === 'customers' && <CustomersDropdown />}
+                        {activeTab === 'integrations' && <IntegrationCard />}
+                        {activeTab === 'resources' && <ResoucesCard />}
                     </div>
                 </motion.div>
             </div>

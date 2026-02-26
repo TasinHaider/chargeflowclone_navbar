@@ -5,137 +5,106 @@ import obvibg from '../../../../public/customersCardImages/obvibg.png';
 import obvi from '../../../../public/customersCardImages/obvilogo.png';
 import elementorbg from '../../../../public/customersCardImages/elementor.png';
 import elementor from '../../../../public/customersCardImages/elementorlogo.png';
+import fanaticsbg from '../../../../public/customersCardImages/fanatics.png';
+import fanatics from '../../../../public/customersCardImages/fanaticslogo.png';
+import hexcladbg from '../../../../public/customersCardImages/hexclad.png';
+import hexclad from '../../../../public/customersCardImages/hexcladlogo.png';
 
 const CustomersCard = () => {
   return (
     <div className="flex w-full justify-between p-4 bg-transparent gap-2">
 
-      {/* CARD 1: ALL CASE STUDIES (Previous logic) */}
-      <div className="group relative h-[315px] w-[370px] flex-shrink-0 cursor-pointer overflow-hidden rounded-[0.88em] border border-white/5 bg-[#151515] p-6 font-inter transition-all duration-300 hover:border-white/10">
+      {/* CARD 1: ALL CASE STUDIES */}
+      <div className="group relative h-[315px] w-[370px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/5 bg-[#151515] p-6 font-inter transition-all duration-500 hover:border-white/10">
         <div className="absolute inset-0 pointer-events-none">
-          <Image src={allcasebg} alt="allcasebg" fill className="object-contain transition-transform duration-700 ease-out" priority />
-          <div className="absolute inset-0" />
+          <Image
+            src={allcasebg}
+            alt=""
+            fill
+            className="object-contain brightness-110 contrast-125 grayscale group-hover:opacity-0 transition-opacity duration-500"
+            priority
+          />
+          <Image
+            src={allcasebg}
+            alt=""
+            fill
+            className="object-contain opacity-0 group-hover:opacity-100 group-hover:brightness-[1.4] group-hover:saturate-[1.6] transition-all duration-500 z-20"
+            priority
+          />
         </div>
-        <div className="relative z-10">
-          <h5 className="text-sm font-medium text-white">All Case Studies</h5>
+        <div className="relative z-30">
+          <h5 className="text-[16px] font-medium text-white tracking-tight">All Case Studies</h5>
         </div>
       </div>
 
       {/* CARD 2: OBVI */}
-      <div className="relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0">
+      <div className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/10">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src={obvibg} alt="" fill className="object-contain brightness-110 contrast-125 grayscale group-hover:opacity-0 transition-opacity duration-500" />
           <Image
             src={obvibg}
-            alt="obvibg"
+            alt=""
             fill
-            className="object-contain   transition-transform duration-700"
-            priority
+            className="object-contain opacity-0 group-hover:opacity-100 group-hover:brightness-[1.4] group-hover:saturate-[1.8] transition-all duration-700 z-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
         </div>
-
-        <div className="relative z-10 flex flex-col h-full">
-          <div>
-            <Image
-              src={obvi}
-              alt="obvi"
-              className="object-contain"
-              priority
-            />
+        <div className="relative z-30 flex flex-col h-full justify-between">
+          <div className="grayscale brightness-150 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+            <Image src={obvi} alt="obvi logo" className="object-contain" priority />
           </div>
-          <span className="absolute bottom-0 right-0 px-1.5 py-0.5 rounded-full bg-gray-800 text-[#97a3b6] text-[9px] font-bold">
+          <span className="self-end px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#97a3b6] text-[9px] font-bold uppercase tracking-widest">
             eCommerce
           </span>
         </div>
       </div>
 
       {/* CARD 3: ELEMENTOR */}
-      <div className="relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0">
-          <Image
-            src={elementorbg}
-            alt="elementorbg"
-            fill
-            className="object-contain transition-transform duration-700"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+      <div className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/10">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src={elementorbg} alt="" fill className="object-contain brightness-110 contrast-125 grayscale group-hover:opacity-0 transition-opacity duration-500" />
+          <Image src={elementorbg} alt="" fill className="object-contain opacity-0 group-hover:opacity-100 group-hover:brightness-[1.4] group-hover:saturate-[1.8] transition-all duration-700 z-20" />
         </div>
-
-        {/* Content Layer */}
-        <div className="relative z-10 h-full">
-          <div className="inline-block">
-            <Image
-              src={elementor}
-              alt="elementor"
-              className="object-contain"
-              priority
-            />
+        <div className="relative z-30 flex flex-col h-full justify-between">
+          <div className="grayscale brightness-150 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+            <Image src={elementor} alt="elementor logo" className="object-contain" priority />
           </div>
-
-          {/* Kept exactly as your original code */}
-          <span className="absolute bottom-0 right-0 px-1.5 py-0.5 rounded-full bg-gray-800 text-[#97a3b6] text-[9px] font-bold uppercase">
-            eCommerce
+          <span className="self-end px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#97a3b6] text-[9px] font-bold uppercase tracking-widest">
+            Saas
           </span>
         </div>
       </div>
 
-      {/* CARD 4*/}
-      <div className="relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0">
-          <Image
-            src={obvibg}
-            alt="obvibg"
-            fill
-            className="object-contain   transition-transform duration-700"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+      {/* CARD 4: FANATICS */}
+      <div className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/10">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src={fanaticsbg} alt="" fill className="object-contain brightness-110 contrast-125 grayscale group-hover:opacity-0 transition-opacity duration-500" />
+          <Image src={fanaticsbg} alt="" fill className="object-contain opacity-0 group-hover:opacity-100 group-hover:brightness-[1.4] group-hover:saturate-[1.8] transition-all duration-700 z-20" />
         </div>
-
-        <div className="relative z-10 flex flex-col h-full">
-          <div>
-            <Image
-              src={obvi}
-              alt="obvi"
-              className="object-contain"
-              priority
-            />
+        <div className="relative z-30 flex flex-col h-full justify-between">
+          <div className="grayscale brightness-150 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+            <Image src={fanatics} alt="fanatics logo" className="object-contain" priority />
           </div>
-          <span className="absolute bottom-0 right-0 px-1.5 py-0.5 rounded-full bg-gray-800 text-[#97a3b6] text-[9px] font-bold">
-            eCommerce
+          <span className="self-end px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#97a3b6] text-[9px] font-bold uppercase tracking-widest">
+            Marketplace
           </span>
         </div>
       </div>
 
-      {/* CARD 5*/}
-      <div className="relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden group cursor-pointer">
-        <div className="absolute inset-0">
-          <Image
-            src={obvibg}
-            alt="obvibg"
-            fill
-            className="object-contain   transition-transform duration-700"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+      {/* CARD 5: HEXCLAD */}
+      <div className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/10">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image src={hexcladbg} alt="" fill className="object-contain brightness-110 contrast-125 grayscale group-hover:opacity-0 transition-opacity duration-500" />
+          <Image src={hexcladbg} alt="" fill className="object-contain opacity-0 group-hover:opacity-100 group-hover:brightness-[1.4] group-hover:saturate-[1.8] transition-all duration-700 z-20" />
         </div>
-
-        <div className="relative z-10 flex flex-col h-full">
-          <div>
-            <Image
-              src={obvi}
-              alt="obvi"
-              className="object-contain"
-              priority
-            />
+        <div className="relative z-30 flex flex-col h-full justify-between">
+          <div className="grayscale brightness-150 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500">
+            <Image src={hexclad} width={80} height={30} alt="hexclad logo" className="object-contain" priority />
           </div>
-          <span className="absolute bottom-0 right-0 px-1.5 py-0.5 rounded-full bg-gray-800 text-[#97a3b6] text-[9px] font-bold">
-            eCommerce
+          <span className="self-end px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[#97a3b6] text-[9px] font-bold uppercase tracking-widest">
+            Travel
           </span>
         </div>
       </div>
-
 
     </div>
   );

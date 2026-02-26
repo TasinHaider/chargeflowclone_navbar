@@ -11,14 +11,22 @@ const PreventCard = () => {
     <div className="flex w-full justify-between p-4 bg-transparent gap-2">
 
       {/* CARD 1: PREVENT */}
-      <div className="relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter">
+      <div className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
+        {/* The "Lift" Gradient */}
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"
+          style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
+        />
+
         <div className="absolute inset-0 pointer-events-none">
-          <Image src={preventbg} alt="prevent" fill className="object-cover opacity-40" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+          <Image src={preventbg} alt="" fill className="object-cover grayscale opacity-30 transition-none" priority />
+          <Image src={preventbg} alt="" fill className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" priority />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent z-20" />
         </div>
-        <div className="relative z-10">
+
+        <div className="relative z-30">
           <header className="flex items-center gap-2">
-            <h5 className="text-white text-sm font-medium">Prevent</h5>
+            <h5 className="text-white text-[16px] font-medium">Prevent</h5>
             <span className="px-1.5 py-0.5 rounded-full bg-white text-[8px] font-bold text-black tracking-tight">NEW</span>
           </header>
           <p className="mt-4 text-[#97A3B6] text-[14px] leading-relaxed">
@@ -28,13 +36,16 @@ const PreventCard = () => {
       </div>
 
       {/* CARD 2: AUTOMATION */}
-      <div className="relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter">
+      <div className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
+        {/* FIX: Added pointer-events-none */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }} />
         <div className="absolute inset-0 pointer-events-none">
-          <Image src={automationbg} alt="automation" fill className="object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+          <Image src={automationbg} alt="" fill className="object-cover grayscale opacity-30 transition-none" />
+          <Image src={automationbg} alt="" fill className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent z-20" />
         </div>
-        <div className="relative z-10">
-          <h5 className="text-white text-sm font-medium">Automation</h5>
+        <div className="relative z-30">
+          <h5 className="text-white text-[16px] font-medium">Automation</h5>
           <p className="mt-4 text-[#97A3B6] text-[14px] leading-relaxed">
             Fully automated chargeback recovery with 4x ROI guarantee.
           </p>
@@ -42,13 +53,16 @@ const PreventCard = () => {
       </div>
 
       {/* CARD 3: ALERTS */}
-      <div className="relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter">
+      <div className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
+        {/* FIX: Added pointer-events-none */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }} />
         <div className="absolute inset-0 pointer-events-none">
-          <Image src={alertsbg} alt="alerts" fill className="object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent" />
+          <Image src={alertsbg} alt="" fill className="object-cover grayscale opacity-30 transition-none" />
+          <Image src={alertsbg} alt="" fill className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent z-20" />
         </div>
-        <div className="relative z-10">
-          <h5 className="text-white text-sm font-medium">Alerts</h5>
+        <div className="relative z-30">
+          <h5 className="text-white text-[16px] font-medium">Alerts</h5>
           <p className="mt-4 text-[#97A3B6] text-[14px] leading-relaxed">
             Cut 90% of chargebacks before they happen, powered by Visa and Mastercard.
           </p>
@@ -56,19 +70,31 @@ const PreventCard = () => {
       </div>
 
       {/* CARD 4: INSIGHTS */}
-      <div className="relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter">
-        <div className="absolute inset-0 pointer-events-none">
+      <div className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10"
+          style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
+        />
+
+        <div className="absolute right-8 bottom-10 w-[150px] h-[150px] pointer-events-none z-20">
           <Image
             src={insightsbg}
-            alt="insights"
+            alt=""
             fill
-            className="object-contain object-right-bottom opacity-50 contrast-[1.1] scale-95 translate-x-2 translate-y-2"
+            className="object-contain object-center grayscale opacity-30 transition-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-[#151515]/40 to-transparent" />
+          <Image
+            src={insightsbg}
+            alt=""
+            fill
+            className="object-contain object-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-50"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent z-30 group-hover:opacity-0 transition-opacity duration-500" />
         </div>
-        <div className="relative z-10">
+
+        <div className="relative z-[60]">
           <header className="flex items-center gap-2">
-            <h5 className="text-white text-sm font-medium">Insights</h5>
+            <h5 className="text-white text-[16px] font-medium">Insights</h5>
             <span className="px-1.5 py-0.5 rounded-full bg-gray-800 text-[8px] font-bold text-[#97A3B6] uppercase tracking-tight">FREE</span>
           </header>
           <p className="mt-4 text-[#97A3B6] text-[14px] leading-relaxed">
@@ -78,14 +104,17 @@ const PreventCard = () => {
       </div>
 
       {/* CARD 5: CONNECT */}
-      <div className="relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter">
+      <div className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 bg-[#151515] rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
+        {/* FIX: Added pointer-events-none */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10" style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }} />
         <div className="absolute inset-0 pointer-events-none">
-          <Image src={connectbg} alt="connect" fill className="object-cover opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#151515]" />
+          <Image src={connectbg} alt="" fill className="object-cover grayscale opacity-30 transition-none" />
+          <Image src={connectbg} alt="" fill className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#151515] z-20" />
         </div>
-        <div className="relative z-10">
+        <div className="relative z-30">
           <header className="flex items-center gap-2">
-            <h5 className="text-white text-sm font-medium">Connect</h5>
+            <h5 className="text-white text-[16px] font-medium">Connect</h5>
             <span className="px-1.5 py-0.5 rounded-full bg-gray-800 text-[8px] font-bold text-[#97A3B6] uppercase tracking-tight">PLATFORMS</span>
           </header>
           <p className="mt-4 text-[#97A3B6] text-[14px] leading-relaxed">
