@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
-import blogprimary from '../../../../public/resourcesCardImages/blog-primary.png';
-import blogsecondary from '../../../../public/resourcesCardImages/blog-secondary.png';
-import reportsprimary from '../../../../public/resourcesCardImages/report-primary.png';
-import reportssecondary from '../../../../public/resourcesCardImages/report-secondary.png';
-import podcastprimary from '../../../../public/resourcesCardImages/podcast-primary.png';
-import podcastsecondary from '../../../../public/resourcesCardImages/podcast-secondary.png';
-import webinarsprimary from '../../../../public/resourcesCardImages/webinars-primary.png';
-import webinarssecondary from '../../../../public/resourcesCardImages/webinars-secondary.png';
+import blogprimary from '../../../../../public/resourcesCardImages/blog-primary.png';
+import blogsecondary from '../../../../../public/resourcesCardImages/blog-secondary.png';
+import reportsprimary from '../../../../../public/resourcesCardImages/report-primary.png';
+import reportssecondary from '../../../../../public/resourcesCardImages/report-secondary.png';
+import podcastprimary from '../../../../../public/resourcesCardImages/podcast-primary.png';
+import podcastsecondary from '../../../../../public/resourcesCardImages/podcast-secondary.png';
+import webinarsprimary from '../../../../../public/resourcesCardImages/webinars-primary.png';
+import webinarssecondary from '../../../../../public/resourcesCardImages/webinars-secondary.png';
 import { IoSearch } from "react-icons/io5";
 
 const ResoucesCard = () => {

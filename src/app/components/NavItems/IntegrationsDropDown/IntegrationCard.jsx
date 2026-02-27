@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import stripe from '../../../../public/integrationsCardImages/strip.png';
-import shopify from '../../../../public/integrationsCardImages/shopify.png';
-import woocomerce from '../../../../public/integrationsCardImages/woocommerce.png';
-import integrationprimary from '../../../../public/integrationsCardImages/integration-primary.png';
-import integrationsecondary from '../../../../public/integrationsCardImages/integration-secondary.png';
+import stripe from '../../../../../public/integrationsCardImages/strip.png';
+import shopify from '../../../../../public/integrationsCardImages/shopify.png';
+import woocomerce from '../../../../../public/integrationsCardImages/woocommerce.png';
+import integrationprimary from '../../../../../public/integrationsCardImages/integration-primary.png';
+import integrationsecondary from '../../../../../public/integrationsCardImages/integration-secondary.png';
 
 const IntegrationCard = () => {
     return (

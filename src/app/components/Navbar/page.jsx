@@ -4,17 +4,17 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { MdArrowOutward } from "react-icons/md";
-import MarqueePage from './Marquee';
-import icon from "../../../public/icon.svg";
-import chargeflow from '../../../public/chargeflow.svg';
+import MarqueePage from '../Marquee/page';
+import icon from "../../../../public/icon.svg";
+import chargeflow from '../../../../public/chargeflow.svg';
 import { AnimatePresence, motion } from "motion/react";
-import CustomersDropdown from './CustomersDropdown/CustomersCard';
-import PreventCard from './ProductDropDown/PreventCard';
-import IntegrationCard from './IntegrationsDropDown/IntegrationCard';
-import ResoucesCard from './ResourcesDropDown/ResoucesCard';
-import CompanyCard from './CompanyDropDown/CompanyCard';
+import CustomersDropdown from '../NavItems/CustomersDropdown/CustomersCard';
+import PreventCard from '../NavItems/ProductDropDown/PreventCard';
+import IntegrationCard from '../NavItems/IntegrationsDropDown/IntegrationCard';
+import ResoucesCard from '../NavItems/ResourcesDropDown/ResoucesCard';
+import CompanyCard from '../NavItems/CompanyDropDown/CompanyCard';
 
-const Navbar = () => {
+const NavbarPage = () => {
     const [mounted, setMounted] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [activeTab, setActiveTab] = useState(null);
@@ -78,8 +78,8 @@ const Navbar = () => {
                     </div>
 
                     {/* Navigation */}
-                    <nav className='px-5 py-2 bg-[#1A1A1A] backdrop-blur-md border border-white/10 rounded-full hidden md:block hover:border-white/20 transition-colors'>
-                        <ul className='flex items-center gap-6 font-inter font-semibold text-[12px] text-white/80'>
+                    <nav className='px-5 py-2 bg-[#1A1A1A] hover:bg-black backdrop-blur-md border border-white/10 rounded-full hidden md:block hover:border-white/20 transition-colors'>
+                        <ul className='flex items-center gap-6 font-inter font-semibold text-[12px] text-white'>
                             <li onMouseEnter={() => handleMouseEnter('product')} className="hover:text-white transition-colors cursor-pointer uppercase tracking-tight">
                                 <Link href='/'>Product</Link>
                             </li>
@@ -134,4 +134,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavbarPage;

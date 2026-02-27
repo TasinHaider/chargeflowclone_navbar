@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
-import chargeflowsecondary from '../../../../public/companyCardImages/chargeflow-secondary.png';
-import chargeflowprimary from '../../../../public/companyCardImages/chargeflow-primary.png';
-import brandsecondary from '../../../../public/companyCardImages/brand-secondary.png';
-import brandprimary from '../../../../public/companyCardImages/brand-primary.png';
-import careerprimary from '../../../../public/companyCardImages/career-primary.png';
-import careersecondary from '../../../../public/companyCardImages/career-secondary.png';
-import partnerprimary from '../../../../public/companyCardImages/partner-primary.png';
-import partnersecondary from '../../../../public/companyCardImages/partner-secondary.png';
-import contactprimary from '../../../../public/companyCardImages/contact-primary.png';
-import contactsecondary from '../../../../public/companyCardImages/contact-secondary.png';
+import chargeflowsecondary from '../../../../../public/companyCardImages/chargeflow-secondary.png';
+import chargeflowprimary from '../../../../../public/companyCardImages/chargeflow-primary.png';
+import brandsecondary from '../../../../../public/companyCardImages/brand-secondary.png';
+import brandprimary from '../../../../../public/companyCardImages/brand-primary.png';
+import careerprimary from '../../../../../public/companyCardImages/career-primary.png';
+import careersecondary from '../../../../../public/companyCardImages/career-secondary.png';
+import partnerprimary from '../../../../../public/companyCardImages/partner-primary.png';
+import partnersecondary from '../../../../../public/companyCardImages/partner-secondary.png';
+import contactprimary from '../../../../../public/companyCardImages/contact-primary.png';
+import contactsecondary from '../../../../../public/companyCardImages/contact-secondary.png';
 
 const CompanyCard = () => {
     // Standardized styles to ensure no layout shifts

@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
-import preventsecondary from '../../../../public/productCardImages/preventsecondary.png';
-import preventsprimary from '../../../../public/productCardImages/preventprimary.png';
-import automationsecondary from '../../../../public/productCardImages/automation-secondary.png';
-import automationprimary from '../../../../public/productCardImages/automation-primary.png';
-import alertssecondary from '../../../../public/productCardImages/alerts-secondary.png';
-import alertsprimary from '../../../../public/productCardImages/alerts-primary.png';
-import insightsprimary from '../../../../public/productCardImages/insights.png';
-import contactsecondary from '../../../../public/productCardImages/connect-secondary.png';
-import contactprimary from '../../../../public/productCardImages/connect-primary.png';
+import preventsecondary from '../../../../../public/productCardImages/preventsecondary.png';
+import preventsprimary from '../../../../../public/productCardImages/preventprimary.png';
+import automationsecondary from '../../../../../public/productCardImages/automation-secondary.png';
+import automationprimary from '../../../../../public/productCardImages/automation-primary.png';
+import alertssecondary from '../../../../../public/productCardImages/alerts-secondary.png';
+import alertsprimary from '../../../../../public/productCardImages/alerts-primary.png';
+import insightsprimary from '../../../../../public/productCardImages/insights.png';
+import contactsecondary from '../../../../../public/productCardImages/connect-secondary.png';
+import contactprimary from '../../../../../public/productCardImages/connect-primary.png';
 
 const PreventCard = () => {
   // Constants for professional UI consistency
