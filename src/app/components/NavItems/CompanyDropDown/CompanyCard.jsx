@@ -12,22 +12,20 @@ import contactprimary from '../../../../../public/companyCardImages/contact-prim
 import contactsecondary from '../../../../../public/companyCardImages/contact-secondary.png';
 
 const CompanyCard = () => {
-    // Standardized styles to ensure no layout shifts
     const cardBg = { backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' };
     const blueGlow = { background: 'linear-gradient(to top, rgba(52, 72, 255, 0.08) 0%, transparent 80%)' };
 
     return (
-        <div className="flex w-full items-start justify-center p-4 bg-transparent gap-2 font-inter">
+        <div className="flex w-full items-start justify-center p-4 bg-transparent gap-2 font-inter md:max-w-[760px] lg:max-w-[1240px] mx-auto">
 
             {/* CARD 1: FEATURED CASE STUDY */}
             <div
                 style={cardBg}
-                className="group relative h-[318px] w-[650px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-8 transition-all duration-500 hover:border-white/[0.15] will-change-transform font-inter"
+                // Original h-[318px] and w-[650px] now explicitly lg:
+                className="group relative w-full md:w-[350px] md:h-[280px] lg:h-[318px] lg:w-[650px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-8 transition-all duration-500 hover:border-white/[0.15] will-change-transform font-inter"
             >
-                {/* Blue Hover Glow Overlay */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
 
-                {/* Background Logo Reveal Logic */}
                 <div className="absolute inset-0 pointer-events-none z-10">
                     <Image
                         src={chargeflowprimary}
@@ -65,10 +63,10 @@ const CompanyCard = () => {
             </div>
 
             {/* CARD 2: GRID SECTIONS */}
-            <div className='grid grid-cols-2 gap-2'>
+            <div className='grid grid-cols-2 gap-2 flex-grow'>
 
-                {/* Brand Card */}
-                <div style={cardBg} className="group relative h-[155px] w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
+                {/* Brand Card - Original h-[155px] w-[240px] now lg: */}
+                <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
                         <Image src={brandprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
@@ -77,8 +75,8 @@ const CompanyCard = () => {
                     <h5 className="relative z-30 text-[16px] font-medium text-white tracking-tight">Brand</h5>
                 </div>
 
-                {/* Careers Card */}
-                <div style={cardBg} className="group relative h-[155px] w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
+                {/* Careers Card - Original h-[155px] w-[240px] now lg: */}
+                <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
                         <Image src={careerprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
@@ -90,8 +88,8 @@ const CompanyCard = () => {
                     </header>
                 </div>
 
-                {/* Partner Card */}
-                <div style={cardBg} className="group relative h-[155px] w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
+                {/* Partner Card - Original h-[155px] w-[240px] now lg: */}
+                <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
                         <Image src={partnerprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
@@ -100,9 +98,9 @@ const CompanyCard = () => {
                     <h5 className="relative z-30 text-[16px] font-medium text-white tracking-tight">Become a Partner</h5>
                 </div>
 
-                {/* Contact Card */}
-                <div style={cardBg} className="group relative h-[155px] w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
+                {/* Contact Card - Original h-[155px] w-[240px] now lg: */}
+                <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
                         <Image src={contactprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
                         <Image src={contactsecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 scale-95" priority />

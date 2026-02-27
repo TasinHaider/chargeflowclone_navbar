@@ -19,16 +19,17 @@ const cardStyle = { backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #15151
 const blueGlowStyle = { background: 'linear-gradient(to top, rgba(52, 72, 255, 0.06) 0%, transparent 100%)' };
 
 const CustomersCard = () => {
-  // Shared class for the category spans to ensure pixel-level consistency
   const categorySpanClass = "self-end px-2.5 py-1 rounded-full bg-gray-900 border border-white/[0.08] text-[#97a3b6] text-[9px] font-bold uppercase tracking-widest group-hover:text-white group-hover:border-white/[0.2] transition-all duration-700";
 
   return (
+    // Restored your original 'flex' layout exactly
     <div className="flex w-full justify-between p-4 bg-transparent gap-2 font-inter max-w-[1240px] mx-auto">
 
       {/* CARD 1: ALL CASE STUDIES */}
       <div
         style={cardStyle}
-        className="group relative h-[315px] w-[370px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.04] p-8 transition-all duration-500 hover:border-white/[0.12]"
+        // Original sizes moved to lg:, new sizes added to md:
+        className="group relative md:w-[140px] md:h-[280px] lg:h-[315px] lg:w-[370px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.04] p-8 transition-all duration-500 hover:border-white/[0.12]"
       >
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
         <div className="absolute botttom-0 right-0 w-full h-full pointer-events-none">
@@ -37,14 +38,14 @@ const CustomersCard = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent z-25 group-hover:opacity-0 transition-opacity duration-500" />
         </div>
         <div className="relative z-30">
-          <h5 className="text-[16px] font-medium text-white tracking-tight">All Case Studies</h5>
+          <h5 className="md:text-[13px] lg:text-[16px] font-medium text-white tracking-tight">All Case Studies</h5>
         </div>
       </div>
 
       {/* CARD 2: OBVI */}
       <div
         style={cardStyle}
-        className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
+        className="group relative md:w-[140px] md:h-[280px] lg:w-[185px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
       >
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
         <div className="absolute inset-0 pointer-events-none">
@@ -68,7 +69,7 @@ const CustomersCard = () => {
       {/* CARD 3: ELEMENTOR */}
       <div
         style={cardStyle}
-        className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
+        className="group relative md:w-[140px] md:h-[280px] lg:w-[185px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
       >
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
         <div className="absolute inset-0 pointer-events-none">
@@ -92,7 +93,7 @@ const CustomersCard = () => {
       {/* CARD 4: FANATICS */}
       <div
         style={cardStyle}
-        className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
+        className="group relative md:w-[140px] md:h-[280px] lg:w-[185px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
       >
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
         <div className="absolute inset-0 pointer-events-none">
@@ -116,7 +117,7 @@ const CustomersCard = () => {
       {/* CARD 5: HEXCLAD */}
       <div
         style={cardStyle}
-        className="group relative w-[185px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
+        className="group relative md:w-[140px] md:h-[280px] lg:w-[185px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden cursor-pointer transition-all duration-500 hover:border-white/[0.12]"
       >
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
         <div className="absolute inset-0 pointer-events-none">

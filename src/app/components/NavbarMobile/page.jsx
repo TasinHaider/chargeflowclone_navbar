@@ -64,7 +64,7 @@ const NavbarMobile = () => {
         <div className="md:hidden w-full px-4 mt-5 fixed top-0 left-0 z-[100]">
             <div className={`transition-all duration-700 rounded-2xl border 
                 ${show
-                    ? 'bg-black/90 backdrop-blur-2xl shadow-2xl border-white/[0.05] h-[calc(100vh-40px)]'
+                    ? 'bg-black/90 backdrop-blur-2xl shadow-2xl border-white/[0.05] h-auto'
                     : 'bg-black border-white/[0.05] h-auto'
                 } overflow-hidden flex flex-col`}>
 

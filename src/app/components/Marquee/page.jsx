@@ -40,7 +40,7 @@ const MarqueePage = () => {
                             />
                         </svg>
                     </div>
-                    <div className='flex items-center gap-0'><p className='font-inter font-normal text-[12px] '>
+                    <div className='flex items-center gap-0'><p className='font-inter font-normal md:text-[8px] lg:md:text-[8px] lg:text-[12px] '>
                         <span className='text-[#C3F967]'>ANNOUNCING OUR $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p><FiArrowRight />
                     </div>
 
@@ -69,7 +69,7 @@ const MarqueePage = () => {
                             />
                         </svg>
                     </div>
-                    <div className='flex items-center gap-0'><p className='font-inter font-normal text-[12px]'><span className='text-[#C3F967]'>ANNOUNCING OUR $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p> <FiArrowRight />
+                    <div className='flex items-center gap-0'><p className='font-inter font-normal md:text-[8px] lg:text-[12px]'><span className='text-[#C3F967]'>ANNOUNCING OUR $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p> <FiArrowRight />
                     </div>
 
                     {/*3rd line */}
@@ -99,7 +99,7 @@ const MarqueePage = () => {
                         </svg>
                     </div>
                     <div className='flex items-center gap-0 pr-4'>
-                        <p className='font-inter font-normal text-[12px]'>
+                        <p className='font-inter font-normal md:text-[8px] lg:text-[12px]'>
                             <span className='text-[#C3F967]'>ANNOUNCING OUR $35M SERIES A FUNDING</span> TO TAKE DOWN FRIENDLY FRAUD-READ MORE</p><FiArrowRight />
                     </div>
 
