@@ -23,10 +23,10 @@ const PreventCard = () => {
   `;
 
   return (
-    <div className="flex w-full justify-between p-4 bg-transparent gap-2 max-w-[1240px] mx-auto">
+    <div className="w-full grid md:grid-cols-5 justify-between p-4 bg-transparent gap-2 max-w-[1240px] mx-auto">
 
       {/* CARD 1: PREVENT */}
-      <div style={cardStyle} className="group relative w-[225px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden font-inter transition-all duration-500 hover:border-white/[0.12] cursor-pointer will-change-transform">
+      <div style={cardStyle} className="group relative md:w-[225px] h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/[0.04] overflow-hidden font-inter transition-all duration-500 hover:border-white/[0.12] cursor-pointer will-change-transform">
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlowStyle} />
 
         <div className="absolute  right-0 bottom-0 w-full h-[280px] pointer-events-none">
