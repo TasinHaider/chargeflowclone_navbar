@@ -68,23 +68,20 @@ const NavbarMobile = () => {
                 </div>
 
                 {/* Scrollable Content Area */}
-                    <AnimatePresence>
-                        {show && (
-                            <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: "auto" }}
-                                exit={{ opacity: 0, height: 0 }}
-                                // We set a max-height and enable vertical scrolling
-                                className="flex-1 overflow-y-auto px-6 pb-6 max-h-[75vh] scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-                            >
-                                <motion.ul
-                                    variants={listVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    className="flex flex-col text-white font-bold uppercase tracking-widest"
-                                >
+                <AnimatePresence>
+                    {show && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="flex-1 overflow-y-auto px-6 pb-6 max-h-[75vh] scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" >
+                            <motion.ul
+                                variants={listVariants}
+                                initial="hidden"
+                                animate="visible"
+                                className="flex flex-col text-white font-bold uppercase tracking-widest">
 
-                                {/* SIGN IN / SIGN UP */}
+                                {/* Buttons */}
                                 <motion.li variants={itemVariants} className='py-4'>
                                     <div className="flex items-center justify-center gap-3 w-full">
                                         <Link
@@ -93,7 +90,7 @@ const NavbarMobile = () => {
                                             Sign in
                                             <MdArrowOutward className="text-[14px] opacity-60" />
                                         </Link>
-                                        <Link href="/" className="w-3/5 group flex justify-center items-center gap-1 px-2.5 py-1.5 bg-[#3448FF] text-white font-inter font-semibold text-[12px] rounded-3xl uppercase tracking-wider hover:bg-[#2333c4]">
+                                        <Link href="/" className="w-3/5 group flex justify-center items-center gap-1 px-2 py-1.5 bg-[#3448FF] text-white font-inter font-semibold text-[12px] rounded-3xl uppercase tracking-wider hover:bg-[#2333c4]">
                                             Schedule a demo
                                             <MdArrowOutward className="text-[14px]" />
                                         </Link>
