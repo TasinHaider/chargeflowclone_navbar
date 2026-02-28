@@ -68,18 +68,21 @@ const NavbarMobile = () => {
                 </div>
 
                 {/* Scrollable Content Area */}
-                <AnimatePresence>
-                    {show && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="flex-1 overflow-y-auto px-6 pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" >
-                            <motion.ul
-                                variants={listVariants}
-                                initial="hidden"
-                                animate="visible"
-                                className="flex flex-col text-white font-bold uppercase tracking-widest" >
+                    <AnimatePresence>
+                        {show && (
+                            <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                // We set a max-height and enable vertical scrolling
+                                className="flex-1 overflow-y-auto px-6 pb-6 max-h-[75vh] scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+                            >
+                                <motion.ul
+                                    variants={listVariants}
+                                    initial="hidden"
+                                    animate="visible"
+                                    className="flex flex-col text-white font-bold uppercase tracking-widest"
+                                >
 
                                 {/* SIGN IN / SIGN UP */}
                                 <motion.li variants={itemVariants} className='py-4'>
