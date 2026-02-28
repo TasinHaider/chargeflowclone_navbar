@@ -17,30 +17,23 @@ const CompanyCard = () => {
 
     return (
         <div className="flex w-full items-start justify-center p-4 bg-transparent gap-2 font-inter md:max-w-[760px] lg:max-w-[1240px] mx-auto">
-
-            {/* CARD 1: FEATURED CASE STUDY */}
-            <div
-                style={cardBg}
-                // Original h-[318px] and w-[650px] now explicitly lg:
-                className="group relative w-full md:w-[350px] md:h-[280px] lg:h-[318px] lg:w-[650px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-8 transition-all duration-500 hover:border-white/[0.15] will-change-transform font-inter"
-            >
+            {/* CARD 1 */}
+            <div style={cardBg} className="group relative w-full md:w-[350px] md:h-[280px] lg:h-[318px] lg:w-[650px] flex-shrink-0 cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-8 transition-all duration-500 hover:border-white/[0.15] will-change-transform font-inter" >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
 
                 <div className="absolute inset-0 pointer-events-none z-10">
                     <Image
                         src={chargeflowprimary}
-                        alt=""
+                        alt="chargeflowprimary"
                         fill
                         className="object-contain object-bottom grayscale opacity-30 transition-all duration-700"
-                        priority
-                    />
+                        priority />
                     <Image
                         src={chargeflowsecondary}
-                        alt=""
+                        alt="chargeflowsecondary"
                         fill
                         className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"
-                        priority
-                    />
+                        priority />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#151515] via-transparent to-transparent z-20 group-hover:opacity-0 transition-opacity duration-500" />
                 </div>
 
@@ -56,31 +49,29 @@ const CompanyCard = () => {
                     opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 
                     border border-white/10 hover:border-white/40
                     transition-all duration-500 ease-out cursor-pointer"
-                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }}
-                >
+                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.12)' }} >
                     Learn More
                 </span>
             </div>
 
-            {/* CARD 2: GRID SECTIONS */}
+            {/* Rest Cards */}
             <div className='grid grid-cols-2 gap-2 flex-grow'>
-
-                {/* Brand Card - Original h-[155px] w-[240px] now lg: */}
+                {/* Brand Card */}
                 <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
-                        <Image src={brandprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
-                        <Image src={brandsecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 scale-95" priority />
+                        <Image src={brandprimary} alt="brandprimary" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
+                        <Image src={brandsecondary} alt="brandsecondary" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 scale-95" priority />
                     </div>
                     <h5 className="relative z-30 text-[16px] font-medium text-white tracking-tight">Brand</h5>
                 </div>
 
-                {/* Careers Card - Original h-[155px] w-[240px] now lg: */}
+                {/* Careers Card */}
                 <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
-                        <Image src={careerprimary} alt="" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
-                        <Image src={careersecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 scale-95" priority />
+                        <Image src={careerprimary} alt="careerprimary" fill className="object-contain object-bottom grayscale opacity-30 transition-all duration-700 scale-95" priority />
+                        <Image src={careersecondary} alt="careersecondary" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 scale-95" priority />
                     </div>
                     <header className="relative z-30 flex items-center justify-between">
                         <h5 className="text-white text-[16px] font-medium">Careers</h5>
@@ -88,7 +79,7 @@ const CompanyCard = () => {
                     </header>
                 </div>
 
-                {/* Partner Card - Original h-[155px] w-[240px] now lg: */}
+                {/* Partner Card */}
                 <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">
@@ -98,7 +89,7 @@ const CompanyCard = () => {
                     <h5 className="relative z-30 text-[16px] font-medium text-white tracking-tight">Become a Partner</h5>
                 </div>
 
-                {/* Contact Card - Original h-[155px] w-[240px] now lg: */}
+                {/* Contact Card */}
                 <div style={cardBg} className="group relative w-full md:w-[170px] md:h-[136px] lg:h-[155px] lg:w-[240px] cursor-pointer overflow-hidden rounded-2xl border border-white/[0.05] p-6 transition-all duration-500 hover:border-white/[0.15] will-change-transform">
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 ease-in-out pointer-events-none z-10" style={blueGlow} />
                     <div className="absolute inset-0 pointer-events-none z-10 p-2">

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MdArrowOutward, MdOutlineClose } from "react-icons/md";
 import { RiMenuLine } from "react-icons/ri";
-import { AnimatePresence, motion } from "framer-motion"; // Note: Ensured standard import for motion
+import { AnimatePresence, motion } from "framer-motion";
 import icon from "../../../../public/icon.svg";
 import { FaArrowDown } from "react-icons/fa";
 import PreventCardMobile from '../NavItems/PreventCardMobile/PreventCardMobile';
@@ -14,19 +14,16 @@ const DashedLine = () => (
     <svg
         width="100%"
         height="6"
-        viewBox="0 0 1200 6" // Increased viewBox width for a wider internal coordinate system
+        viewBox="0 0 1200 6"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="opacity-100 w-full"
-        preserveAspectRatio="none" // Allows the dash to stretch naturally
-    >
+        preserveAspectRatio="none" >
         {/* Left Diamond */}
         <path d="M0.113249 3L3 5.88675L5.88675 3L3 0.113249L0.113249 3Z" fill="#364153" />
-
-        {/* Right Diamond - Adjusted to the new wider viewBox end (1200) */}
+        {/* Right Diamond  */}
         <path d="M1199.89 3L1197 0.113249L1194.11 3L1197 5.88675L1199.89 3Z" fill="#364153" />
-
-        {/* Dashed Line Path - Using stroke-dasharray for a cleaner, wider professional look */}
+        {/* Dashed Line Path */}
         <line
             x1="6"
             y1="3"
@@ -34,8 +31,7 @@ const DashedLine = () => (
             y2="3"
             stroke="#364153"
             strokeWidth="1"
-            strokeDasharray="4 4"
-        />
+            strokeDasharray="4 4" />
     </svg>
 );
 
@@ -49,10 +45,7 @@ const NavbarMobile = () => {
 
     const listVariants = {
         hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.05 }
-        }
+        visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
     };
 
     const itemVariants = {
@@ -65,12 +58,10 @@ const NavbarMobile = () => {
             <div className={`transition-all duration-700 rounded-2xl border 
                 ${show
                     ? 'bg-black/90 backdrop-blur-2xl shadow-2xl border-white/[0.05] h-auto'
-                    : 'bg-black border-white/[0.05] h-auto'
-                } overflow-hidden flex flex-col`}>
-
-                {/* Mobile Header - Static inside the flex */}
+                    : 'bg-black border-white/[0.05] h-auto'} overflow-hidden flex flex-col`}>
+                {/* Mobile Header */}
                 <div className="flex justify-between items-center p-4 flex-shrink-0">
-                    <Image src={icon} alt="Logo" className="brightness-0 invert" width={22} height={22} />
+                    <Image src={icon} alt="Logo" className="brightness-0 invert cursor-pointer" width={22} height={22} />
                     <div className="text-white text-2xl cursor-pointer" onClick={() => setShow(!show)}>
                         {show ? <MdOutlineClose /> : <RiMenuLine />}
                     </div>
@@ -83,22 +74,19 @@ const NavbarMobile = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            /* Added 'scrollbar-hide' or standard CSS logic to hide the bar */
-                            className="flex-1 overflow-y-auto px-6 pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-                        >
+                            className="flex-1 overflow-y-auto px-6 pb-6 scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]" >
                             <motion.ul
                                 variants={listVariants}
                                 initial="hidden"
                                 animate="visible"
-                                className="flex flex-col text-white font-bold uppercase tracking-widest"
-                            >
-                                {/* SIGN IN / SIGN UP AREA */}
+                                className="flex flex-col text-white font-bold uppercase tracking-widest" >
+
+                                {/* SIGN IN / SIGN UP */}
                                 <motion.li variants={itemVariants} className='py-4'>
                                     <div className="flex items-center justify-center gap-3 w-full">
                                         <Link
                                             href="/"
-                                            className="w-2/5 group flex justify-center items-center gap-1 px-4 py-1.5 font-inter font-semibold text-[12px] text-white uppercase tracking-wider rounded-3xl transition-all duration-300 border border-transparent hover:border-white/10 hover:bg-white/5"
-                                        >
+                                            className="w-2/5 group flex justify-center items-center gap-1 px-4 py-1.5 font-inter font-semibold text-[12px] text-white uppercase tracking-wider rounded-3xl transition-all duration-300 border border-transparent hover:border-white/10 hover:bg-white/5" >
                                             Sign in
                                             <MdArrowOutward className="text-[14px] opacity-60" />
                                         </Link>
@@ -124,8 +112,7 @@ const NavbarMobile = () => {
                                                     animate={{ height: "auto", opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
                                                     transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
-                                                    className="overflow-hidden"
-                                                >
+                                                    className="overflow-hidden" >
                                                     <PreventCardMobile />
                                                 </motion.div>
                                             )}
@@ -163,7 +150,6 @@ const NavbarMobile = () => {
                                         </AnimatePresence>
                                     </div>
                                 </motion.li>
-
                                 <DashedLine />
 
                                 <motion.li variants={itemVariants} className='py-4'>
@@ -186,8 +172,7 @@ const NavbarMobile = () => {
                                                     animate={{ height: "auto", opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
                                                     transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
-                                                    className="overflow-hidden"
-                                                >
+                                                    className="overflow-hidden" >
                                                     {/* Integrations headlines */}
                                                     <ul className="flex flex-col gap-1 pt-4">
                                                         <li className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[0px]">All Integrations</li>
@@ -203,7 +188,7 @@ const NavbarMobile = () => {
 
                                 <DashedLine />
 
-                                {/* resources section */}
+                                {/* Resources section */}
                                 <motion.li variants={itemVariants} className='py-4'>
                                     <div className='flex flex-col'>
                                         <div className='flex items-center justify-between cursor-pointer' onClick={() => setIsResourcesOpen(!isResourcesOpen)}>
@@ -217,8 +202,7 @@ const NavbarMobile = () => {
                                                     animate={{ height: "auto", opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
                                                     transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
-                                                    className="overflow-hidden"
-                                                >
+                                                    className="overflow-hidden" >
                                                     {/* Resources headlines */}
                                                     <ul className="flex flex-col gap-1 pt-4">
                                                         <li className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[0px]">Blog</li>
@@ -250,8 +234,7 @@ const NavbarMobile = () => {
                                                     animate={{ height: "auto", opacity: 1 }}
                                                     exit={{ height: 0, opacity: 0 }}
                                                     transition={{ duration: 0.3, ease: [0.33, 1, 0.68, 1] }}
-                                                    className="overflow-hidden"
-                                                >
+                                                    className="overflow-hidden" >
                                                     {/* Company headlines */}
                                                     <ul className="flex flex-col gap-1 pt-4">
                                                         <li className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[0px]">Who we are</li>

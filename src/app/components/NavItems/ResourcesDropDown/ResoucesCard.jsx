@@ -16,12 +16,10 @@ const ResoucesCard = () => {
     return (
         <section className="w-full bg-transparent">
             <div className='flex flex-nowrap w-full justify-center p-4 bg-transparent gap-2 md:max-w-[768px] lg:max-w-[1240px] mx-auto'>
-
                 {/* CARD 1: BLOG */}
                 <div
                     style={cardBg}
-                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer"
-                >
+                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
                     <div className="absolute md:w-50 md:h-50 lg:w-80 lg:h-80 left-4 top-10 pointer-events-none z-20">
                         <Image src={blogprimary} alt="blogprimary" fill className="object-contain object-bottom grayscale opacity-50 transition-none" priority />
                         <Image src={blogsecondary} alt="blogsecondary" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" priority />
@@ -35,8 +33,7 @@ const ResoucesCard = () => {
                 {/* CARD 2: REPORTS */}
                 <div
                     style={cardBg}
-                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer"
-                >
+                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
                     <div className="absolute md:w-50 md:h-50 lg:w-80 lg:h-80 left-4 top-10 pointer-events-none z-20">
                         <Image src={reportsprimary} alt="" fill className="object-contain object-bottom grayscale opacity-50 transition-none" priority />
                         <Image src={reportssecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" priority />
@@ -50,8 +47,7 @@ const ResoucesCard = () => {
                 {/* CARD 3: PODCAST */}
                 <div
                     style={cardBg}
-                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer"
-                >
+                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
                     <div className="absolute md:w-50 md:h-50 lg:w-80 lg:h-80 left-4 top-10 pointer-events-none z-20">
                         <Image src={podcastprimary} alt="" fill className="object-contain object-bottom grayscale opacity-50 transition-none" priority />
                         <Image src={podcastsecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" priority />
@@ -65,8 +61,7 @@ const ResoucesCard = () => {
                 {/* CARD 4: WEBINARS */}
                 <div
                     style={cardBg}
-                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer"
-                >
+                    className="group relative w-full md:w-[140px] md:h-[260px] lg:w-[228px] lg:h-[315px] flex-shrink-0 p-6 rounded-2xl border border-white/5 overflow-hidden font-inter transition-all duration-500 hover:border-white/10 cursor-pointer">
                     <div className="absolute md:w-50 md:h-50 lg:w-80 lg:h-80 left-4 top-10 pointer-events-none z-20">
                         <Image src={webinarsprimary} alt="" fill className="object-contain object-bottom grayscale opacity-50 transition-none" priority />
                         <Image src={webinarssecondary} alt="" fill className="object-contain object-bottom opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10" priority />
@@ -77,13 +72,11 @@ const ResoucesCard = () => {
                     </div>
                 </div>
 
-                {/* CARD 5: ROI & Reason Codes - RESTORED TO ORIGINAL */}
+                {/* CARD 5: ROI & Reason  */}
                 <div className="flex flex-col gap-2 w-full md:w-[140px] lg:w-[195px] h-[260px] lg:h-[315px] flex-shrink-0">
-                    {/* TOP PARTITION */}
                     <div
                         style={cardBg}
-                        className="group flex-1 p-5 flex flex-col justify-between rounded-2xl border border-white/5 transition-all duration-500 hover:border-white/10 cursor-pointer overflow-hidden relative"
-                    >
+                        className="group flex-1 p-5 flex flex-col justify-between rounded-2xl border border-white/5 transition-all duration-500 hover:border-white/10 cursor-pointer overflow-hidden relative" >
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" style={{ background: 'linear-gradient(to top, rgba(52, 72, 255, 0.15) 0%, transparent 60%)' }} />
                         <div className="relative z-10">
                             <h5 className="text-white text-[14px] font-medium leading-tight">ROI Calculator</h5>
@@ -98,11 +91,10 @@ const ResoucesCard = () => {
                         </div>
                     </div>
 
-                    {/* BOTTOM PARTITION */}
+                    {/* CARD 6: BOTTOM PARTITION */}
                     <div
                         style={cardBg}
-                        className="group flex-1 p-5 flex flex-col justify-start rounded-2xl border border-white/5 transition-all duration-500 hover:border-white/10 cursor-pointer overflow-hidden relative"
-                    >
+                        className="group flex-1 p-5 flex flex-col justify-start rounded-2xl border border-white/5 transition-all duration-500 hover:border-white/10 cursor-pointer overflow-hidden relative" >
                         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" style={{ background: 'linear-gradient(to top, rgba(52, 72, 255, 0.15) 0%, transparent 60%)' }} />
                         <div className="relative z-10">
                             <h5 className="text-white text-[14px] font-medium leading-tight">Reason Codes</h5>

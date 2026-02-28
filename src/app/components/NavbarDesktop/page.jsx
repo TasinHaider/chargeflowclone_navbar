@@ -7,8 +7,6 @@ import { motion, AnimatePresence } from "motion/react";
 import MarqueePage from '../Marquee/page';
 import icon from "../../../../public/icon.svg";
 import chargeflow from '../../../../public/chargeflow.svg';
-
-// Dropdowns
 import CustomersDropdown from '../NavItems/CustomersDropdown/CustomersCard';
 import PreventCard from '../NavItems/ProductDropDown/PreventCard';
 import IntegrationCard from '../NavItems/IntegrationsDropDown/IntegrationCard';
@@ -17,6 +15,7 @@ import CompanyCard from '../NavItems/CompanyDropDown/CompanyCard';
 import { MdArrowOutward } from 'react-icons/md';
 
 const NavbarDesktop = ({ isHovered, setIsHovered, activeTab, setActiveTab }) => {
+
     const transitionConfig = { duration: 0.7, ease: [0.23, 1, 0.32, 1] };
     const smoothTransition = "transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]";
 
@@ -31,46 +30,36 @@ const NavbarDesktop = ({ isHovered, setIsHovered, activeTab, setActiveTab }) => 
                 </div>
             </div>
 
-            {/* Desktop Main Bar */}
+            {/* Desktop */}
             <div
                 style={{ maxWidth: isHovered ? '1200px' : '100%' }}
-                className={`${smoothTransition} w-full bg-black relative z-[70] ${isHovered ? 'rounded-b-2xl border-x border-b border-white/5 -mt-[2px]' : 'border-white/0 -mt-[2px]'}`}
-            >
+                className={`${smoothTransition} w-full bg-black relative z-[70]
+                ${isHovered ? 'rounded-b-2xl border-x border-b border-white/5 -mt-[2px]' : 'border-white/0 -mt-[2px]'}`}>
                 <div className='max-w-[1200px] mx-auto px-4 lg:px-6 flex justify-between items-center py-2'>
                     <div className="flex items-center gap-1 overflow-hidden shrink-0">
-                        {/* Icon stays fixed */}
+                        {/* Icon */}
                         <Image
                             src={icon}
                             alt="Logo"
                             className="brightness-0 invert shrink-0 lg:w-[25px] md:w-[20px]"
                             width={24}
-                            height={24}
-                        />
+                            height={24} />
 
                         <motion.div
                             initial={false}
                             animate={{
                                 width: isHovered ? 0 : "auto",
-                                opacity: isHovered ? 0 : 1,
-                                // Slight x-offset makes it feel like it's being "pushed" out
-                                x: isHovered ? -10 : 0
+                                opacity: isHovered ? 0 : 1, x: isHovered ? -10 : 0
                             }}
-                            transition={{
-                                duration: 0.6,
-                                ease: [0.16, 1, 0.3, 1], // Custom Quintic Out ease for "snappier" feel
-                            }}
-                            className="flex overflow-hidden whitespace-nowrap items-center pointer-events-none"
-                        >
+                            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], }}
+                            className="flex overflow-hidden whitespace-nowrap items-center pointer-events-none">
+
                             <motion.div
                                 animate={{ x: isHovered ? -20 : 0 }}
                                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                                className="flex items-center"
-                            >
-                                <Image
-                                    src={chargeflow}
-                                    alt="Chargeflow"
-                                    className="brightness-0 invert lg:w-[130px] md:w-[100px] h-auto"
-                                />
+                                className="flex items-center" >
+                                <Image src={chargeflow} alt="Chargeflow"
+                                    className="brightness-0 invert lg:w-[130px] md:w-[100px] h-auto" />
                             </motion.div>
                         </motion.div>
                     </div>
@@ -106,8 +95,7 @@ const NavbarDesktop = ({ isHovered, setIsHovered, activeTab, setActiveTab }) => 
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={transitionConfig}
-                            className="w-full bg-black/40 backdrop-blur-xl overflow-hidden rounded-b-2xl"
-                        >
+                            className="w-full bg-black/40 backdrop-blur-xl overflow-hidden rounded-b-2xl">
                             <div className="relative z-10">
                                 {activeTab === 'product' && <PreventCard />}
                                 {activeTab === 'customers' && <CustomersDropdown />}

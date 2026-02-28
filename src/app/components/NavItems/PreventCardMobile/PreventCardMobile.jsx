@@ -19,10 +19,7 @@ const PreventCardMobile = () => {
         <div className="flex flex-col w-full gap-2 px-0 py-4">
 
             {/* CARD 1: PREVENT */}
-            <div
-                style={{ backgroundImage: 'linear-gradient(221deg, #161616 0%, #0b0b0b 98%)' }}
-                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5"
-            >
+            <div style={{ backgroundImage: 'linear-gradient(221deg, #161616 0%, #0b0b0b 98%)' }} className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5" >
                 <div className="relative z-30 w-full flex flex-col pointer-events-none">
                     <header className="flex items-center gap-2">
                         <h5 className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[-0.05em]">
@@ -47,16 +44,14 @@ const PreventCardMobile = () => {
                             width={220}
                             height={150}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0"
-                        />
+                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0" />
                         <Image
                             src={preventsprimary}
                             alt="Prevent Foreground"
                             width={200}
                             height={136}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20"
-                        />
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
                     </div>
                 </div>
             </div>
@@ -64,8 +59,7 @@ const PreventCardMobile = () => {
             {/* CARD 2: AUTOMATION */}
             <div
                 style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
-                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5"
-            >
+                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5">
                 <div className="relative z-30 w-full flex flex-col pointer-events-none">
                     <header className="flex items-center gap-2">
                         <h5 className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[-0.05em]">
@@ -85,16 +79,14 @@ const PreventCardMobile = () => {
                             width={220}
                             height={150}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0"
-                        />
+                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0" />
                         <Image
                             src={automationprimary}
                             alt="Automation Foreground"
                             width={200}
                             height={136}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20"
-                        />
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
                     </div>
                 </div>
             </div>
@@ -102,8 +94,7 @@ const PreventCardMobile = () => {
             {/* CARD 3: ALERTS */}
             <div
                 style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
-                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5"
-            >
+                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5" >
                 <div className="relative z-30 w-full flex flex-col pointer-events-none">
                     <header className="flex items-center gap-2">
                         <h5 className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[-0.05em]">
@@ -123,16 +114,14 @@ const PreventCardMobile = () => {
                             width={220}
                             height={150}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0"
-                        />
+                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0" />
                         <Image
                             src={alertsprimary}
                             alt="Alerts Foreground"
                             width={200}
                             height={136}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20"
-                        />
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
                     </div>
                 </div>
             </div>
@@ -140,8 +129,7 @@ const PreventCardMobile = () => {
             {/* CARD 4: INSIGHTS */}
             <div
                 style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
-                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5"
-            >
+                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5">
                 <div className="relative z-30 w-full flex flex-col pointer-events-none">
                     <header className="flex items-center gap-2">
                         <h5 className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[-0.05em]">
@@ -164,16 +152,14 @@ const PreventCardMobile = () => {
                             width={220}
                             height={150}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0"
-                        />
+                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0" />
                         <Image
                             src={insightsprimary}
                             alt="Insights Foreground"
                             width={200}
                             height={136}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20"
-                        />
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
                     </div>
                 </div>
             </div>
@@ -181,8 +167,7 @@ const PreventCardMobile = () => {
             {/* CARD 5: CONNECT */}
             <div
                 style={{ backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' }}
-                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5"
-            >
+                className="group relative w-full h-[136px] rounded-[14px] overflow-hidden font-inter transition-all duration-500 cursor-pointer flex flex-col justify-center p-5" >
                 <div className="relative z-30 w-full flex flex-col pointer-events-none">
                     <header className="flex items-center gap-2">
                         <h5 className="text-white text-[16px] font-medium leading-[1.2] normal-case tracking-[-0.05em]">
@@ -205,16 +190,14 @@ const PreventCardMobile = () => {
                             width={220}
                             height={150}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0"
-                        />
+                            className="w-full h-full grayscale opacity-100 transition-all duration-700 group-hover:opacity-0" />
                         <Image
                             src={contactprimary}
                             alt="Connect Foreground"
                             width={200}
                             height={136}
                             style={{ objectFit: 'contain', objectPosition: 'right center', scale: '1.6' }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20"
-                        />
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20" />
                     </div>
                 </div>
             </div>

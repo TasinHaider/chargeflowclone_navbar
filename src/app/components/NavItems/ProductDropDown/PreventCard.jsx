@@ -11,7 +11,7 @@ import contactsecondary from '../../../../../public/productCardImages/connect-se
 import contactprimary from '../../../../../public/productCardImages/connect-primary.png';
 
 const PreventCard = () => {
-  // Constants for professional UI consistency
+
   const cardStyle = { backgroundImage: 'linear-gradient(221deg, #1c1c1c 0%, #151515 98%)' };
   const blueGlowStyle = { background: 'linear-gradient(to top, rgba(52, 72, 255, 0.06) 0%, transparent 100%)' };
 
@@ -19,10 +19,8 @@ const PreventCard = () => {
     absolute bottom-4 right-4 z-50 px-4 py-1.5 rounded-full text-[13px] font-medium text-white 
     opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 
     border border-white/10 hover:border-white/40
-    transition-all duration-700 ease-in-out cursor-pointer
-  `;
+    transition-all duration-700 ease-in-out cursor-pointer `;
 
-  // Responsive Width and Height only. Logic and structure remain untouched.
   const cardResponsiveClass = `
     group relative flex-shrink-0 p-4 lg:p-6 rounded-2xl border border-white/[0.04] 
     overflow-hidden font-inter transition-all duration-500 hover:border-white/[0.12] 
