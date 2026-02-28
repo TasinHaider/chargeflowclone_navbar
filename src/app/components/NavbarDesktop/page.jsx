@@ -37,15 +37,41 @@ const NavbarDesktop = ({ isHovered, setIsHovered, activeTab, setActiveTab }) => 
                 className={`${smoothTransition} w-full bg-black relative z-[70] ${isHovered ? 'rounded-b-2xl border-x border-b border-white/5 -mt-[2px]' : 'border-white/0 -mt-[2px]'}`}
             >
                 <div className='max-w-[1200px] mx-auto px-4 lg:px-6 flex justify-between items-center py-2'>
-                    <div className='flex items-center gap-1 overflow-hidden shrink-0'>
-                        <Image src={icon} alt="Logo" className="brightness-0 invert shrink-0 lg:w-[25px] lg:h-full md:w-[20px]" width={24} height={24} />
+                    <div className="flex items-center gap-1 overflow-hidden shrink-0">
+                        {/* Icon stays fixed */}
+                        <Image
+                            src={icon}
+                            alt="Logo"
+                            className="brightness-0 invert shrink-0 lg:w-[25px] md:w-[20px]"
+                            width={24}
+                            height={24}
+                        />
+
                         <motion.div
                             initial={false}
-                            animate={{ width: isHovered ? 0 : "auto", opacity: isHovered ? 0 : 1, marginRight: isHovered ? 0 : 4 }}
-                            transition={transitionConfig}
-                            className="flex overflow-hidden whitespace-nowrap items-center"
+                            animate={{
+                                width: isHovered ? 0 : "auto",
+                                opacity: isHovered ? 0 : 1,
+                                // Slight x-offset makes it feel like it's being "pushed" out
+                                x: isHovered ? -10 : 0
+                            }}
+                            transition={{
+                                duration: 0.6,
+                                ease: [0.16, 1, 0.3, 1], // Custom Quintic Out ease for "snappier" feel
+                            }}
+                            className="flex overflow-hidden whitespace-nowrap items-center pointer-events-none"
                         >
-                            <Image src={chargeflow} alt="Chargeflow" className="brightness-0 invert lg:w-[130px] lg:h-full md:w-[100px] md:h-full" />
+                            <motion.div
+                                animate={{ x: isHovered ? -20 : 0 }}
+                                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                                className="flex items-center"
+                            >
+                                <Image
+                                    src={chargeflow}
+                                    alt="Chargeflow"
+                                    className="brightness-0 invert lg:w-[130px] md:w-[100px] h-auto"
+                                />
+                            </motion.div>
                         </motion.div>
                     </div>
 
